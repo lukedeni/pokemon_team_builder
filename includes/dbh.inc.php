@@ -6,7 +6,6 @@ $dBName = "pokemon";
 
 // Create connection
 $conn = mysqli_connect($dBServername, $dBUsername, $dBPassword, $dBName);
-print($dBName);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
