@@ -116,6 +116,19 @@ header {
   text-align: center;
 }
 
+.header-signup1 {
+  height: 100%;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-family: arial;
+  font-size: 20px;
+  line-height: 100%;
+  color: #111;
+}
+
 main {
   padding-top: 20px;
 }

@@ -1,5 +1,7 @@
 <?php
+  // First we start a session which allow for us to store information as SESSION variables.
   session_start();
+  // "require" creates an error message and stops the script. "include" creates an error and continues the script.
   require "includes/dbh.inc.php";
 ?>
 <!DOCTYPE html>
@@ -22,8 +24,9 @@
                     <li><a href="index.php">Home</a></li>
                     <?php
                     if (isset($_SESSION['id'])) {
-                    echo '<li><a href="#">View Teams</a></li>
-                    <li><a href="#">Create Team</a></li>';
+                    echo '<li><a href="view.php">View Teams</a></li>
+                    <li><a href="create.php">Create Team</a></li>
+                    <li><a href="create.php">Battle Your Teams</a></li>';
                     }
                     ?>
                 </ul>
