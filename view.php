@@ -20,8 +20,13 @@
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             while ($row = mysqli_fetch_assoc($result)) {
-                echo '<a class="header-signup1">'.$row["tname"].'      ('.$row["wins"].'-'.$row["losses"].')</a>';
-                echo '<br/>';
+                echo '<form class="form-signup" action="viewteam.php" method="post">
+                <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
+                <input type="hidden" name="tname" value="'.$row["tname"].'" />
+                <button type="submit">'.$row["tname"].' ('.$row["wins"].'-'.$row["losses"].')</button>
+
+                </form>
+                <br/>';
             }
           }
           ?>
