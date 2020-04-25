@@ -17,8 +17,8 @@ require "header.php";
 
             // else {
 
-                $team_sql = "SELECT * FROM team;";
-                $poke_sql = "SELECT * FROM pokemon2;";
+                $team_sql = "SELECT * FROM team WHERE tname LIKE CONCAT('%', ?, '%');";
+                $poke_sql = "SELECT * FROM pokemon2 WHERE pname LIKE CONCAT('%', ?, '%');";
 
                 $stmt = mysqli_stmt_init($conn);
 
@@ -30,7 +30,7 @@ require "header.php";
                     exit();
                 }
                 else {
-                    mysqli_stmt_bind_param($stmt, "s", $search_query);
+                    mysqli_stmt_bind_param($stmt, "s", $query);
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while($row = mysqli_fetch_assoc($result)) {
@@ -52,7 +52,7 @@ require "header.php";
                     exit();
                 }
                 else {
-                    mysqli_stmt_bind_param($stmt, "s", $search_query);
+                    mysqli_stmt_bind_param($stmt, "s", $query);
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while($row = mysqli_fetch_assoc($result)) {
