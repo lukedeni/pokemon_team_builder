@@ -33,6 +33,10 @@
                     }
                     ?>
                 </ul>
+                <form action="search.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px;" class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" name="search_query" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" name="search-submit" type="submit">Search</button>
+                </form>
                 </nav>
                 <div class="header-login">
                 <?php
