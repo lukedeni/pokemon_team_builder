@@ -21,7 +21,7 @@
         <header>
             <nav class="nav-header-main">
                 <a class="header-logo" href="index.php">
-                    <img src="img/logo.jpg" alt="mmtuts logo">
+                    <img src="img/logo.jpg" alt="mmtuts logo" width = 200% height = auto>
                 </a>
                 <ul>
                     <li><a href="index.php">Home</a></li>
