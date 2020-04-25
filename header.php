@@ -32,15 +32,15 @@
                     echo '<li><a href="view.php">View Teams</a></li>
                     <li><a href="create.php">Create Team</a></li>
                     <li><a href="battle.php">Battle Your Teams</a></li>
-                    <li><a href="adv-search.php">Adv. Search</a></li>';
+                    <li><a href="adv-search.php">Search</a></li>';
                     }
                     ?>
                 </ul>
 
-                <form action="search.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px;" class="form-inline">
+                <!-- <form action="search.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px;" class="form-inline">
                     <input class="form-control mr-sm-2" type="search" name="search_query" placeholder="Search..." aria-label="Search">
                     <button class="btn btn-primary my-2 my-sm-0" style="margin-right: 5px;" name="search-submit" type="submit">Search</button>
-                </form>
+                </form> -->
 
 
                 </nav>

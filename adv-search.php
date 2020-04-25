@@ -6,7 +6,7 @@
       <div class="wrapper-main">
         <section class="section-default">
                 <h2> Advanced Search </h2>
-                        <p> Use this page to hone your search beyond basic keyword matching on from the navbar search functionality. You can look for specific attributes of teams or pokemon. </p> 
+                        <p> Use this page to search with basic keyword matching, or sort/filter based on menus below for additional search functionality. You can look for specific attributes of teams or pokemon. </p> 
                 
                 <!-- start form -->
                 <form action="search.php" method="post" >
@@ -26,86 +26,86 @@
                     <div class="border rounded card-body form-group" style="font-size: 16px !important; font-weight: normal !important;">
                         <div class="form-group" style="font-size: 16px !important; margin-top: 0px; margin-bottom: 15px;">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="more-hp" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="hp" id="hp1" value="more">
                                 <label class="form-check-label" for="inlineRadio1">More than</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="less-hp" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="hp" id="hp2" value="less">
                                 <label class="form-check-label" for="inlineRadio2">Less than</label>
                             </div>
-                            <input style="margin-top: 5px;" class="form-control form-control-sm" type="text" placeholder="# HP">
+                            <input style="margin-top: 5px;" class="form-control form-control-sm" type="text" name="hp_val" placeholder="# HP">
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox1" value="normal">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox1" value="normal">
                             <label class="form-check-label" for="inlineCheckbox1">normal</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox2" value="fighting">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox2" value="fighting">
                             <label class="form-check-label" for="inlineCheckbox2">fighting</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox3" value="flying">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox3" value="flying">
                             <label class="form-check-label" for="inlineCheckbox3">flying</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox4" value="poison">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox4" value="poison">
                             <label class="form-check-label" for="inlineCheckbox1">poison</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox5" value="ground">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox5" value="ground">
                             <label class="form-check-label" for="inlineCheckbox2">ground</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox6" value="rock">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox6" value="rock">
                             <label class="form-check-label" for="inlineCheckbox3">rock</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox7" value="bug">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox7" value="bug">
                             <label class="form-check-label" for="inlineCheckbox1">bug</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox8" value="ghost">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox8" value="ghost">
                             <label class="form-check-label" for="inlineCheckbox2">ghost</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox9" value="steel">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox9" value="steel">
                             <label class="form-check-label" for="inlineCheckbox3">steel</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox10" value="fire">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox10" value="fire">
                             <label class="form-check-label" for="inlineCheckbox1">fire</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox11" value="water">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox11" value="water">
                             <label class="form-check-label" for="inlineCheckbox2">water</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox12" value="grass">
-                            <label class="form-check-label" for="inlineCheckbox3">grass)</label>
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox12" value="grass">
+                            <label class="form-check-label" for="inlineCheckbox3">grass</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox13" value="electric">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox13" value="electric">
                             <label class="form-check-label" for="inlineCheckbox1">electric</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox14" value="psychic">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox14" value="psychic">
                             <label class="form-check-label" for="inlineCheckbox2">psychic</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox15" value="ice" >
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox15" value="ice" >
                             <label class="form-check-label" for="inlineCheckbox3">ice</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox16" value="dragon">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox16" value="dragon">
                             <label class="form-check-label" for="inlineCheckbox1">dragon</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox17" value="dark">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox17" value="dark">
                             <label class="form-check-label" for="inlineCheckbox2">dark</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="inlineCheckbox18" value="fairy">
+                            <input class="form-check-input" type="radio" name="type" id="inlineCheckbox18" value="fairy">
                             <label class="form-check-label" for="inlineCheckbox3">fairy</label>
                         </div>
                     </div>
@@ -114,20 +114,20 @@
                     <div class="card card-body">
                         <div class="form-group" style="font-size: 16px !important; font-weight: normal !important; margin-top: 0px; margin-bottom: 15px;">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="more-battles" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="battles" id="battle1" value="more">
                                 <label class="form-check-label" for="inlineRadio1">More than</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="less-battles" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="battles" id="battle2" value="less">
                                 <label class="form-check-label" for="inlineRadio2">Less than</label>
                             </div>
-                            <input style="margin-top: 5px;" class="form-control form-control-sm" type="text" placeholder="# total battles">
+                            <input style="margin-top: 5px;" class="form-control form-control-sm" type="text" name="total_battles" placeholder="# total battles">
                         </div>
 
-                        <select class="form-control form-control-sm">
-                            <option value="wl-na" selected="selected">No. wins vs. losses are unimportant</option>
-                            <option value="wl-more" >More wins than losses</option>
-                            <option value="wl-less">More losses than wins</option>
+                        <select name="wl" class="form-control form-control-sm">
+                            <option  value="na" selected="selected">No. wins vs. losses are unimportant</option>
+                            <option  value="more" >More wins than losses</option>
+                            <option  value="less">More losses than wins</option>
                         </select>
                     </div>
                 </div>
