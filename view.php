@@ -20,12 +20,25 @@
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             while ($row = mysqli_fetch_assoc($result)) {
-                echo '<form class="form-signup" action="viewteam.php" method="post">
-                <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
-                <input type="hidden" name="tname" value="'.$row["tname"].'" />
-                <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;">'.$row["tname"].' ('.$row["wins"].'-'.$row["losses"].')</button>
-
-                </form>
+                echo '<div class="card">
+                <div class="container" style="padding: 10px;">
+                  <h4><b>'.$row["tname"].'</b></h4>
+                  <p>Wins: '.$row["wins"].'</p>
+                  <p>Losses: '.$row["losses"].'</p>
+                  <div style="display: inline-block"> 
+                    <form class="form-signup" action="viewteam.php" method="post">
+                    <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
+                    <input type="hidden" name="tname" value="'.$row["tname"].'" />
+                    <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> View Team</button>
+                    </form>
+                    <form class="delete-team" action="includes/deleteteam.inc.php" method="post">
+                    <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
+                    <input type="hidden" name="tname" value="'.$row["tname"].'" />
+                    <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> Delete Team</button>
+                    </form>
+                    </div>
+                    </div>
+                  </div>
                 <br/>';
             }
           }
