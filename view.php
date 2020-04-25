@@ -23,7 +23,7 @@
                 echo '<form class="form-signup" action="viewteam.php" method="post">
                 <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
                 <input type="hidden" name="tname" value="'.$row["tname"].'" />
-                <button type="submit">'.$row["tname"].' ('.$row["wins"].'-'.$row["losses"].')</button>
+                <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;">'.$row["tname"].' ('.$row["wins"].'-'.$row["losses"].')</button>
 
                 </form>
                 <br/>';
