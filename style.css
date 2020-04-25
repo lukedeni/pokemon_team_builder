@@ -69,10 +69,20 @@ header {
   height: 60%;
   display: flex;
   flex-direction: row;
+  float: right;
 }
 
 .header-login form {
   height: 100%;
+}
+
+.login-container {
+  display: flex;
+  float: right;
+}
+
+.logout-container {
+  float: right;
 }
 
 .header-login form input {
