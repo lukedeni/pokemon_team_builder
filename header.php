@@ -26,33 +26,34 @@
                     <img src="img/logo.jpg" alt="mmtuts logo" width=200% height=auto>
                 </a>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php" style="padding: 5px">Home</a></li>
                     <?php
                     if (isset($_SESSION['id'])) {
-                    echo '<li><a href="view.php">View Teams</a></li>
-                    <li><a href="create.php">Create Team</a></li>
-                    <li><a href="battle.php">Battle Your Teams</a></li>
-                    <li><a href="adv-search.php">Adv. Search</a></li>
-                    <li> <form action="includes/logout.inc.php" method="post">
-                    <button type="submit" name="login-submit">Logout</button>
-                    </form> </li>';
+                    echo '<li><a href="view.php" style="padding: 5px">View Teams</a></li>
+                    <li><a href="create.php" style="padding: 5px">Create Team</a></li>
+                    <li><a href="battle.php" style="padding: 5px">Battle Your Teams</a></li>
+                    <li><a href="adv-search.php" style="padding: 5px">Adv. Search</a></li>
+                    <li> <form action="includes/logout.inc.php" method="post" style="position: absolute; padding: 5px; top: 5px">
+                    <button class= "btn btn-primary my-2 my-sm-0" type="submit" name="login-submit">Logout</button>
+                    </form> </li>
+                    <li><form action="search.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px;" class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" name="search_query" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" style="margin-right: 5px;" name="search-submit" type="submit">Search</button>
+                    </form></li>';
                     }
                     else if (!isset($_SESSION['id'])){
                         echo '<li> <div class="login-container">
-                            <form action="includes/login.inc.php" method="post">
+                            <form action="includes/login.inc.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px">
                             <input type="text" name="mailuid" placeholder="E-mail/Username">
                             <input type="password" name="pwd" placeholder="Password">
-                            <button type="submit" name="login-submit">Login</button>
+                            <button class="btn btn-primary my-2 my-sm-0" type="submit" name="login-submit">Login</button>
                             </form>
                         </div> </li>';
                     }
                     ?>
                 </ul>
 
-                <form action="search.php" method="post" style="position: absolute; padding: 8px; top: 5px; right: 20px;" class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" name="search_query" placeholder="Search..." aria-label="Search">
-                    <button class="btn btn-primary my-2 my-sm-0" style="margin-right: 5px;" name="search-submit" type="submit">Search</button>
-                </form>
+                
 
 
                 </nav>
