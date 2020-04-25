@@ -25,6 +25,8 @@ if (isset($_POST['delete'])) {
       header("Location: ../viewteam.php?team_id=".$team."");
         exit(); 
 }
+mysqli_stmt_close($stmt);
+mysqli_close($conn);
 }
 else {
     header("Location: ../viewteam.php?team_id=".$team_id."");
