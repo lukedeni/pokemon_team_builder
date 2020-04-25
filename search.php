@@ -21,7 +21,7 @@ require "header.php";
                 if(isset($_POST['hp']) and !empty($_POST['hp_val'])) {   
                     $hp = $_POST['hp'];
                     $hp_val = $_POST['hp_val'];
-                    echo '<li> with HP ' . $hp . ' than ' . $hp_val . '</li>';
+                    echo '<li> pokemon with HP ' . $hp . ' than ' . $hp_val . '</li>';
                     if (strcmp($hp, "more") == 0) {
                         // looking for pokemon w/ hp greater than hp_val
                         $poke_sql .= "AND hp > ";                        
@@ -43,7 +43,7 @@ require "header.php";
                 if(isset($_POST['battles']) and !empty($_POST['total_battles'])) {   
                     $battles = $_POST['battles'];
                     $total_battles = $_POST['total_battles'];
-                    echo '<li> with ' . $battles . ' than ' . $total_battles . ' battles </li>';
+                    echo '<li> teams with ' . $battles . ' than ' . $total_battles . ' battles </li>';
                     if (strcmp($battles, "more") == 0) {
                         // looking for pokemon w/ hp greater than hp_val
                         $team_sql .= "AND total_battles >= ";                        
@@ -57,12 +57,16 @@ require "header.php";
 
                 if (isset($_POST["wl"])) {
                     $wl = $_POST["wl"];
-                    echo '<li> with ' . $wl . ' wins than losses </li>';
                     if (strcmp($wl, "less") == 0) {
+                        echo '<li> teams with ' . $wl . ' wins than losses </li>';
                         $team_sql .= " AND wins < losses";       
                     }  
                     elseif (strcmp($wl, "more") == 0) {
+                        echo '<li> teams with ' . $wl . ' wins than losses </li>';
                         $team_sql .= " AND wins > losses";      
+                    }
+                    else {
+                        echo '<li> teams with no regard to numbers of wins and losses </li>';
                     }
                 }
  

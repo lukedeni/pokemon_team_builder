@@ -6,7 +6,7 @@
       <div class="wrapper-main">
         <section class="section-default">
                 <h2> Advanced Search </h2>
-                        <p> Use this page to search with basic keyword matching, or sort/filter based on menus below for additional search functionality. You can look for specific attributes of teams or pokemon. </p> 
+                        <p> Use this page to hone searches instead of basic keyword matches from the navigation search bar. You can sort/filter based on menus below for additional functionality, and look for specific attributes of teams or pokemon. </p> 
                 
                 <!-- start form -->
                 <form action="search.php" method="post" >
