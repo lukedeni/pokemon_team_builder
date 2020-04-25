@@ -7,7 +7,7 @@ if (isset($_POST['delete'])) {
     $tname = $_POST['tname'];
 
     $sql = "DELETE FROM team WHERE team_id=$team_id";
-    $sql_make = "DELETE FROM makes WHERE team_id=$team_id";
+    $sql_make = "DELETE FROM makes WHERE team_id=$team_id AND user_id=user_id";
 
     $stmt = mysqli_stmt_init($conn);
 
