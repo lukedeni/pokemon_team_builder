@@ -17,6 +17,13 @@
             echo '<p class="login-status">You are logged in!</p>';
           }
           ?>
+           <style>
+            body {
+            background-image: url('img/pokemon_friends.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+          </style>
         </section>
       </div>
     </main>

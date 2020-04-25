@@ -21,7 +21,7 @@
         <header>
             <nav class="nav-header-main">
                 <a class="header-logo" href="index.php">
-                    <img src="img/logo.jpg" alt="mmtuts logo">
+                    <img src="img/logo.jpg" alt="mmtuts logo" width = 200% height = auto>
                 </a>
                 <ul>
                     <li><a href="index.php">Home</a></li>
@@ -29,7 +29,19 @@
                     if (isset($_SESSION['id'])) {
                     echo '<li><a href="view.php">View Teams</a></li>
                     <li><a href="create.php">Create Team</a></li>
-                    <li><a href="battle.php">Battle Your Teams</a></li>';
+                    <li><a href="battle.php">Battle Your Teams</a></li>
+                    <li> <form action="includes/logout.inc.php" method="post">
+                    <button type="submit" name="login-submit">Logout</button>
+                    </form> </li>';
+                    }
+                    else if (!isset($_SESSION['id'])){
+                        echo '<li> <div class="login-container">
+                            <form action="includes/login.inc.php" method="post">
+                            <input type="text" name="mailuid" placeholder="E-mail/Username">
+                            <input type="password" name="pwd" placeholder="Password">
+                            <button type="submit" name="login-submit">Login</button>
+                            </form>
+                        </div> </li>';
                     }
                     ?>
                 </ul>
@@ -38,22 +50,5 @@
                     <button class="btn btn-primary my-2 my-sm-0" name="search-submit" type="submit">Search</button>
                 </form>
                 </nav>
-                <div class="header-login">
-                <?php
-                if (!isset($_SESSION['id'])) {
-                echo '<form action="includes/login.inc.php" method="post">
-                    <input type="text" name="mailuid" placeholder="E-mail/Username">
-                    <input type="password" name="pwd" placeholder="Password">
-                    <button type="submit" name="login-submit">Login</button>
-                </form>
-                <a href="signup.php" class="header-signup">Signup</a>';
-
-                }
-                else if (isset($_SESSION['id'])) {
-                echo '<form action="includes/logout.inc.php" method="post">
-                    <button type="submit" name="login-submit">Logout</button>
-                </form>';
-                }
-                ?>
-                </div>
+                
         </header>
