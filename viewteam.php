@@ -46,8 +46,8 @@
                         <p>HP: '.$row["hp"].'</p>
                         <form action="includes/delete.inc.php" method="post">
                         <input type="hidden" name="team_id" value="'.$team_id.'" />
-                        <input type="hidden" name="team_id" value="'.$tname.'" />
-                        <input type="hidden" name="pid" value="'.$row["poke_id"].'" />
+                        <input type="hidden" name="tname" value="'.$tname.'" />
+                        <input type="hidden" name="poke_id" value="'.$row["poke_id"].'" />
                         <button class = btn btn-primary my-2 my-sm-0"  type="submit" name="delete" style="padding: 10px"> Remove from Team</button> 
                         </form>
                     </div>
