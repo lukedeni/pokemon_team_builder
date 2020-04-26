@@ -25,7 +25,7 @@
                   <h4><b>'.$row["tname"].'</b></h4>
                   <p>Wins: '.$row["wins"].'</p>
                   <p>Losses: '.$row["losses"].'</p>
-                  <div style="display: inline-block"> 
+                  <div style="display: inline-block">
                     <form class="form-signup" action="viewteam.php" method="post">
                     <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
                     <input type="hidden" name="tname" value="'.$row["tname"].'" />
@@ -34,7 +34,7 @@
                     <form class="delete-team" action="includes/deleteteam.inc.php" method="post">
                     <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
                     <input type="hidden" name="tname" value="'.$row["tname"].'" />
-                    <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> Delete Team</button>
+                    <button type="submit" name="delete" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> Delete Team</button>
                     </form>
                     </div>
                     </div>
