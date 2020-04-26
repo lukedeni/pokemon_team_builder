@@ -2,11 +2,23 @@
   require "header.php";
 ?>
 
+<style>
+
+body {
+      background-image: url('img/pokemon_background.jpg');
+      height: 100%;
+      background-position: center;
+      background-size: 120% auto;
+      }
+    </style>
     <main>
       <div class="wrapper-main">
         <section class="section-default">
-          <h1>Import Team Data as CSV</h1>
-          <h4>First Row, Team Name -- All Following Entries, Pokemon Name</h4>
+          <h1 style="text-align: center padding-top: 50px;">Import Team Data as CSV</h1>
+          <br>
+          <h4 style="text-align: center"> Please format .csv file for team as follows:</h4> 
+          <p style="text-align: center">Only include one team per csv file. The first row should be the team name and each subsequent row is a Pokemon name. 
+            If no pokemon is found with that name, your team will be created without that Pokemon</p>
           <form class="form-signup" method="post" enctype="multipart/form-data">
             <p>Upload CSV: <input type="file" name="file" /></p>
             <p><input type="submit" name="submit" value="Import"/></p>

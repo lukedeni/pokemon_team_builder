@@ -1,11 +1,15 @@
+<link rel="stylesheet" type="text/css" href="style.css' %}">
+
 <?php
     require "header.php";
 ?>
 
 <main>
+    <div class="bg-image-container" style="padding: 0px;">
       <div class="wrapper-main">
-        <section class="section-default">
-          
+            <section class="section-default">
+                <h1 style="padding-top: 50px"> Battle your Teams!</h1>
+        
           <?php
 
             if (isset($_GET["error"])) {
@@ -112,5 +116,6 @@
           }
           ?>
         </section>
-      </div>
+      </div>        
+      <div>
     </main>

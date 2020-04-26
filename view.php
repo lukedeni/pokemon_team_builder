@@ -1,6 +1,16 @@
 <?php
     require "header.php";
 ?>
+<style>
+
+body {
+      background-image: url('img/pokemon_background.jpg');
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      
+      }
+    </style>
 
 <main>
       <div class="wrapper-main">
