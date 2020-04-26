@@ -2,6 +2,12 @@
 require "header.php";
 ?>
 
+<style>
+body {
+      background-image: url('img/pokemon_background.jpg');
+      background-size: cover;
+      }
+    </style>
 
 <main>
     <div class="wrapper-main">

@@ -9,24 +9,46 @@ button {
 }
 
 body {
-  background-color: #F3F3F3;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+}
+
+main{
+  height:100%;
+  width: auto;
+  margin: 0; 
+  padding: 0;
 }
 
 .wrapper-main {
-  width: 900px;
+  width: auto;
   margin: 0 auto;
+  height: 100%;
+  align-items: center;
+  vertical-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+  vertical-align: center;
 }
 
 header {
-  width: calc(100% - 30px);
+  width: 100%;
   height: 60px;
-  padding: 0 15px;
+  padding: 0 0px;
   background-color: #FFF;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 
 .nav-header-main {
   height: 80%;
@@ -85,6 +107,7 @@ header {
   float: right;
 }
 
+
 .header-login form input {
   height: 100%;
   width: 160px;
@@ -139,15 +162,20 @@ header {
   color: #111;
 }
 
-main {
-  padding-top: 20px;
-}
-
 .section-default {
-  width: 100%;
+  width: 900px;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 6px;
-  background-color: #FFF;
+  
+}
+
+.bg-image-container{
+  background-image: url(img/pokemon_background.jpg);
+  height: 100%;
+  position: relative;
+  background-size: auto 100%;
+ 
 }
 
 .login-status {
@@ -212,4 +240,15 @@ h1 {
   font-size: 16px;
   color: green;
   text-align: center;
+}
+
+#content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }

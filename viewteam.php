@@ -2,8 +2,18 @@
     require "header.php";
 ?>
 
+
+<style>
+body {
+      background-image: url('img/pokemon_background2.jpg');
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      }
+    </style>  
 <main>
-      <div class="wrapper-main">
+
+      <div class="wrapper-main" style="align-items: center">
         <section class="section-default">
 
         <?php
@@ -95,4 +105,5 @@
           ?>
         </section>
       </div>
+     
     </main>
