@@ -5,8 +5,8 @@
 ?>
 
 <main>
-    <div class="bg-image-container" style="padding: 0px;">
-      <div class="wrapper-main">
+    <div class="bg-image-container" >
+      <div class="wrapper-main" style="align-items: center;">
             <section class="section-default">
                 <h1 style="padding-top: 50px"> Battle your Teams!</h1>
         
@@ -40,12 +40,12 @@
             <p>
             <form class="form-signup" action="" method="post">
                 Select 2 Teams to Battle:
-                <select name="Teams[]" multiple>';
+                <select style="width: 200px" name="Teams[]" multiple>';
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<option value="'.$row["team_id"].'">'.$row["tname"].'</option>'; 
             }
             echo '</select></p>
-            <input type="submit" name="submit" value="Battle Teams" /></form><br/>';
+            <input style="align-items: center; height:30px; width:200px" type="submit" name="submit" value="Battle Teams" /></form><br/>';
             if(isset($_POST["submit"])){
                 if(!isset($_POST["Teams"])){
                     echo '<p class="signuperror">Choose 2 Teams!</p>';

@@ -5,7 +5,7 @@
 
     <main>
       <div class="wrapper-main">
-        <section class="section-default">
+        <section class="section-default" style="background-color: white;">
           <!--
           We can choose whether or not to show ANY content on our pages depending on if we are logged in or not. I talk more about SESSION variables in the login.inc.php file!
           -->
@@ -14,7 +14,7 @@
             echo '<p class="login-status">Login or Signup to Make a Team!</p>';
           }
           else if (isset($_SESSION['id'])) {
-            echo '<p class="login-status">You are logged in!</p>';
+            echo '<p class="login-status">Welcome Back '.$_SESSION['uid'].'!</p>';
           }
           ?>
            <style>
@@ -22,6 +22,7 @@
             background-image: url('img/pokemon_friends.png');
             background-repeat: no-repeat;
             background-size: cover;
+           
             }
           </style>
         </section>
