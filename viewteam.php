@@ -8,13 +8,46 @@
 
         <?php
 
-
         if(empty($_POST["team_id"])){
             $tname = $_SESSION["tname"];
             $team_id = $_SESSION["team_id"];
         } else {
             $tname = $_POST["tname"];
             $team_id = $_POST["team_id"];
+        }
+        if(isset($_POST["download_csv"])){
+          ob_end_clean();
+          $tname = $_POST["tname"];
+          $team_id = $_POST["team_id"];
+          header('Content-Type: text/csv; charset=utf-8');
+          header('Content-Disposition: attachment; filename=data.csv');
+          $output = fopen("php://output", "w");
+
+          $sql_getTeamInfo = "SELECT tname, wins, losses FROM team WHERE team_id=?;";
+          $stmt_getTeamInfo = mysqli_stmt_init($conn);
+          mysqli_stmt_prepare($stmt_getTeamInfo, $sql_getTeamInfo);
+          mysqli_stmt_bind_param($stmt_getTeamInfo, "i", $team_id);
+          mysqli_stmt_execute($stmt_getTeamInfo);
+          $result = mysqli_stmt_get_result($stmt_getTeamInfo);
+          $row = mysqli_fetch_assoc($result);
+          fputcsv($output, array("TEAM NAME", "WINS", "LOSSES"));
+          fputcsv($output, $row);
+
+          $sql_getPokeName = "SELECT pname, hp, type FROM contains NATURAL JOIN pokemon1 NATURAL JOIN pokemon2 WHERE team_id=?;";
+          $stmt_getPokeName = mysqli_stmt_init($conn);
+          mysqli_stmt_prepare($stmt_getPokeName, $sql_getPokeName);
+          mysqli_stmt_bind_param($stmt_getPokeName, "i", $team_id);
+          mysqli_stmt_execute($stmt_getPokeName);
+          $result_getPokeName = mysqli_stmt_get_result($stmt_getPokeName);
+          fputcsv($output, array(""));
+          fputcsv($output, array("POKEMON NAME", "HP", "TYPE"));
+          while($row_getPokeName = mysqli_fetch_assoc($result_getPokeName)){
+            fputcsv($output, $row_getPokeName);
+          }
+          
+          fclose($output);
+          exit();
+
         }
 
           $sql = "SELECT * FROM team NATURAL JOIN contains NATURAL JOIN pokemon1 NATURAL JOIN pokemon2 WHERE team_id=?;";
@@ -30,6 +63,11 @@
             <input type="hidden" name="tname" value="'.$tname.'" />
 
             <button type="submit"> Add To Team </button>
+            </form><br/>
+            <form class="form-signup" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="team_id" value="'.$team_id.'" />
+            <input type="hidden" name="tname" value="'.$tname.'" />
+            <p><input type="submit" name="download_csv" value="Download CSV"/></p>
             </form><br/>
             
             ';
