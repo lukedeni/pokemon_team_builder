@@ -35,9 +35,8 @@
                     <form class="delete-team" action="includes/deleteteam.inc.php" method="post">
                     <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
                     <input type="hidden" name="tname" value="'.$row["tname"].'" />
-                    <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> Delete Team</button>
+                    <button type="submit" name="delete" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> Delete Team</button>
                     </form>
-                    </div>
                     </div>
                 <br/>';
             }

@@ -7,7 +7,6 @@
         <section class="section-default">
 
         <?php
-        
 
         if(empty($_POST["team_id"])){
             $tname = $_SESSION["tname"];
@@ -16,9 +15,10 @@
             $tname = $_POST["tname"];
             $team_id = $_POST["team_id"];
         }
-
         if(isset($_POST["download_csv"])){
-
+          ob_end_clean();
+          $tname = $_POST["tname"];
+          $team_id = $_POST["team_id"];
           header('Content-Type: text/csv; charset=utf-8');
           header('Content-Disposition: attachment; filename=data.csv');
           $output = fopen("php://output", "w");
@@ -30,11 +30,10 @@
           mysqli_stmt_execute($stmt_getTeamInfo);
           $result = mysqli_stmt_get_result($stmt_getTeamInfo);
           $row = mysqli_fetch_assoc($result);
-          ob_end_clean();
           fputcsv($output, array("TEAM NAME", "WINS", "LOSSES"));
           fputcsv($output, $row);
 
-          $sql_getPokeName = "SELECT pname, hp, 'type' FROM contains NATURAL JOIN pokemon1 NATURAL JOIN pokemon2 WHERE team_id=?;";
+          $sql_getPokeName = "SELECT pname, hp, type FROM contains NATURAL JOIN pokemon1 NATURAL JOIN pokemon2 WHERE team_id=?;";
           $stmt_getPokeName = mysqli_stmt_init($conn);
           mysqli_stmt_prepare($stmt_getPokeName, $sql_getPokeName);
           mysqli_stmt_bind_param($stmt_getPokeName, "i", $team_id);
@@ -66,6 +65,8 @@
             <button type="submit"> Add To Team </button>
             </form><br/>
             <form class="form-signup" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="team_id" value="'.$team_id.'" />
+            <input type="hidden" name="tname" value="'.$tname.'" />
             <p><input type="submit" name="download_csv" value="Download CSV"/></p>
             </form><br/>
             
