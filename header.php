@@ -33,6 +33,7 @@
                     <li><a href="create.php" style="padding: 5px">Create Team</a></li>
                     <li><a href="battle.php" style="padding: 5px">Battle Your Teams</a></li>
                     <li><a href="adv-search.php" style="padding: 5px">Search</a></li>
+                    <li><a href="import.php" style="padding: 5px">Import Team Data</a></li>
                     <li> <form action="includes/logout.inc.php" method="post" style="position: absolute; padding: 5px; top: 5px">
                     <button class= "btn btn-primary my-2 my-sm-0" type="submit" name="login-submit">Logout</button>
                     </form> </li>
