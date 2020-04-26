@@ -31,6 +31,8 @@
                     <input type="hidden" name="tname" value="'.$row["tname"].'" />
                     <button type="submit" class="btn btn-primary" style="padding: padding: 32px 16px; font-size: 20px;"> View Team</button>
                     </form>
+                    <br/>
+
                     <form class="delete-team" action="includes/deleteteam.inc.php" method="post">
                     <input type="hidden" name="team_id" value="'.$row["team_id"].'" />
                     <input type="hidden" name="tname" value="'.$row["tname"].'" />
@@ -38,7 +40,6 @@
                     </form>
                     </div>
                     </div>
-                  </div>
                 <br/>';
             }
           }
