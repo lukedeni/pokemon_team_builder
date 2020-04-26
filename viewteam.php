@@ -20,7 +20,7 @@
           $tname = $_POST["tname"];
           $team_id = $_POST["team_id"];
           header('Content-Type: text/csv; charset=utf-8');
-          header('Content-Disposition: attachment; filename=data.csv');
+          header('Content-Disposition: attachment; filename='.$tname.'_data.csv');
           $output = fopen("php://output", "w");
 
           $sql_getTeamInfo = "SELECT tname, wins, losses FROM team WHERE team_id=?;";
