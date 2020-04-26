@@ -43,7 +43,10 @@
             echo '</select></p>
             <input type="submit" name="submit" value="Battle Teams" /></form><br/>';
             if(isset($_POST["submit"])){
-                if(count($_POST["Teams"]) != 2){
+                if(!isset($_POST["Teams"])){
+                    echo '<p class="signuperror">Choose 2 Teams!</p>';
+                }
+                else if(count($_POST["Teams"]) != 2){
                     echo '<p class="signuperror">Choose 2 Teams!</p>';
                 }
                  else {
