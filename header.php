@@ -49,7 +49,8 @@
                             <input type="password" name="pwd" placeholder="Password">
                             <button class="btn btn-primary my-2 my-sm-0" type="submit" name="login-submit">Login</button>
                             </form>
-                        </div> </li>';
+                        </div> </li>
+                        <li> <a href="signup.php" class="header-signup">Signup</a></li>';
                     }
                     ?>
                 </ul>
